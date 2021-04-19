@@ -1,0 +1,48 @@
+server:
+  port: 8081
+  servlet:
+    context-path: /
+
+
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/study_xy?useUnicode=true&characterEncoding=utf8&serverTimezone=GMT%2B8
+    username: root
+    password: root
+
+
+  freemarker:
+    suffix: .ftl
+    content-type: text/html
+    charset: UTF-8
+    template-loader-path: classpath:/templates/views/
+
+
+mybatis:
+  mapper-locations: classpath:/mappers/*.xml
+  type-aliases-package: com.xy.work.dep.vo
+
+
+
+  ## 启用热部署
+  devtools:
+    restart:
+      enabled: true
+      additional-paths: src/main/java
+
+
+
+
+
+
+
+logging:
+  level:
+    com:
+      xy:
+       work:
+         dep:
+           dao: debug
+
+

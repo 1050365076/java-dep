@@ -1,0 +1,31 @@
+springBoot-springMVC-mybatis+layui+freemark-mysql开发Web程序
+一、包以及其中的类介绍
+    1.base:基础包
+      1.1 BaseController 基础控制器：进行请求上下文的传输,装载返回实体,创建控制器时继承使用。
+      1.2 BaseMapper  基础mapper,声明了mybatis自动生成的一些CRUD方法,创建具体Mapper时继承
+      1.3 BaseQuery   基础查询实体,多条件查询使用。搭配PageHelper工具进行简单分页。
+      1.4 BaseService 基础业务处理service层,创建service具体实现继承
+      1.5 ResultInfo 返回结果封装
+      注:使用泛型控制具体对应的继承或者实现。
+    2.dep:开发包
+      2.1 annotaion 自定义注解包,存放自定义注解
+      2.2 config 存放MVC处理
+      2.3 controller 控制器
+      2.3 dao 存放mapper
+      2.4 enums 枚举包
+      2.5 exceptions 自定义异常包
+      2.6 interceptors 拦截器包
+      2.7 model 数据模型包
+      2.8 query 存放多条件查询类包
+      2.9 service 业务处理接口
+      2.9.1 service.impl 业务处理具体实现
+      2.10 task 定时任务
+      2.11 proxy AOP代理包
+      2.12 utils 基本工具类
+      2.13 vo 实体包
+    GlobalExceptionResolver: 全局异常处理类
+二、resources介绍
+    1.mappers: 存放mapper.xml文件
+    2.static: 存放js css images 静态资源
+    3.templates: 存放.ftl文件,系统界面
+
